@@ -10,7 +10,11 @@ const Header = () => {
           <p>Click on carrots to filter by heading or use the search box to narrow your results!</p>
         </div>
       </div>
-      <div className="header-bottom"></div>
+      <div className="header-bottom">
+        <form>
+          <input className="form-control" placeholder="Search employees" />
+        </form>
+      </div>
     </div>
   );
 };
