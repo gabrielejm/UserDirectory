@@ -1,4 +1,4 @@
 .container {
-  justify-content: center;
   margin: 50px;
+  display: block;
 }
