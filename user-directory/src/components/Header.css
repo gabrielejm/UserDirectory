@@ -1,0 +1,10 @@
+.header-top {
+  padding: 25px;
+  text-align: center;
+  background-color: navy;
+  border-bottom: 5px solid red;
+}
+
+.header-text {
+  color: white;
+}
