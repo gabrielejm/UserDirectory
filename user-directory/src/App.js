@@ -1,14 +1,8 @@
 import "./App.css";
-import Header from "./components/Header";
-import Table from "./components/Table";
+import Main from "./components/Main";
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <Table />
-    </div>
-  );
+  return <Main />;
 }
 
 export default App;

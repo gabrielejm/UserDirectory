@@ -1,13 +1,12 @@
 import React from "react";
 import "./Table.css";
 
-const Table = () => {
+const Table = ({ users }) => {
   return (
     <div className="container">
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Image</th>
             <th scope="col">Name</th>
             <th scope="col">Phone</th>
@@ -16,14 +15,25 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>pic</td>
-            <td>name</td>
-            <td>phone number</td>
-            <td>email</td>
-            <td>dob</td>
-          </tr>
+          {users[0] !== undefined && users[0].name !== undefined ? (
+            users.map(({ name, picture, phone, email, dob }) => {
+              return (
+                <tr>
+                  <td>
+                    <img src={picture.medium} />
+                  </td>
+                  <td>
+                    {name.first} {name.last}
+                  </td>
+                  <td>{phone}</td>
+                  <td>{email}</td>
+                  <td>{dob.date}</td>
+                </tr>
+              );
+            })
+          ) : (
+            <></>
+          )}
         </tbody>
       </table>
     </div>
