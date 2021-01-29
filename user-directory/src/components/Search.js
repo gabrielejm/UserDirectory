@@ -1,10 +1,11 @@
 import React from "react";
+import "./Search.css";
 
 const Search = ({ handleChange }) => {
   return (
-    <div>
-      <form>
-        <input onChange={(e) => handleChange(e)} type="text" placeholder="Search employees" />
+    <div className="div">
+      <form className="size">
+        <input className="form-control" onChange={(e) => handleChange(e)} type="text" placeholder="Search employees" />
       </form>
     </div>
   );

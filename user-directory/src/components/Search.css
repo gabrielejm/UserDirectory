@@ -1,0 +1,11 @@
+.div {
+  background-color: whitesmoke;
+}
+
+form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 15%;
+}
