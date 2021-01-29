@@ -16,9 +16,9 @@ const Table = ({ users }) => {
         </thead>
         <tbody>
           {users[0] !== undefined && users[0].name !== undefined ? (
-            users.map(({ name, picture, phone, email, dob }) => {
+            users.map(({ login, name, picture, phone, email, dob }) => {
               return (
-                <tr>
+                <tr key={login.uuid}>
                   <td>
                     <img src={picture.medium} />
                   </td>

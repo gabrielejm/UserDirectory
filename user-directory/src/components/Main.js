@@ -17,7 +17,6 @@ const Main = () => {
   }, []);
 
   const handleChange = (event) => {
-    // setSearchTerm(event.target.value);
     const query = event.target.value;
     const queryList = users.filter((user) => {
       let values = Object.values(user).join("").toLowerCase();

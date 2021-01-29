@@ -2,6 +2,7 @@ import React from "react";
 import "./Search.css";
 
 const Search = ({ handleChange }) => {
+  console.log(handleChange);
   return (
     <div className="div">
       <form className="size">
