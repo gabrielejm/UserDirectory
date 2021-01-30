@@ -8,6 +8,7 @@ const Main = () => {
   const [users, setUsers] = useState([{}]);
   const [filteredUsers, setFilteredUsers] = useState([{}]);
   const [sortedName, setSortedName] = useState(users);
+  const [sortType, setSortType] = useState();
 
   useEffect(() => {
     API.search()
@@ -21,11 +22,20 @@ const Main = () => {
   const sortByName = () => {
     const userList = users.sort(function (a, b) {
       // console.log(a.name.first, "a");
-      var test = a.name.first;
-      var testTwo = b.name.first;
-      var textA = test.toUpperCase();
-      var textB = testTwo.toUpperCase();
-      return textA < textB ? -1 : textA > textB ? 1 : 0;
+      const test = a.name.first;
+      const testTwo = b.name.first;
+      const textA = test.toUpperCase();
+      const textB = testTwo.toUpperCase();
+      const ascendingSort = textA < textB ? -1 : textA > textB ? 1 : 0;
+      const desendingSort = textA > textB ? -1 : textA < textB ? 1 : 0;
+
+      if (desendingSort) {
+        return ascendingSort;
+      }
+      if (ascendingSort) {
+        return desendingSort;
+      }
+      // return ascendingSort;
     });
     setSortedName(userList);
     console.log(userList);
