@@ -27,13 +27,13 @@ const Main = () => {
       const textA = test.toUpperCase();
       const textB = testTwo.toUpperCase();
       const ascendingSort = textA < textB ? -1 : textA > textB ? 1 : 0;
-      const desendingSort = textA > textB ? -1 : textA < textB ? 1 : 0;
+      const descendingSort = textA > textB ? -1 : textA < textB ? 1 : 0;
 
       if (desendingSort) {
         return ascendingSort;
       }
       if (ascendingSort) {
-        return desendingSort;
+        return descendingSort;
       }
       // return ascendingSort;
     });
