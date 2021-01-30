@@ -1,17 +1,17 @@
 import React from "react";
 import "./Table.css";
 
-const Table = ({ users }) => {
+const Table = ({ users, sortbyName }) => {
   return (
     <div className="container">
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">Image</th>
-            <th scope="col">Name</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Email</th>
-            <th scope="col">Dob</th>
+            <th>Image</th>
+            <th onClick={() => sortbyName()}>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Dob</th>
           </tr>
         </thead>
         <tbody>
