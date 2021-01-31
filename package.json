@@ -1,5 +1,6 @@
 {
   "name": "user-directory",
+  "homepage": "https://gabrielejm.github.io/UserDirectory/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
